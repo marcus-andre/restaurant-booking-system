@@ -2,5 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # empty for now
+    # Path for the booking creation page
+    path('create/', views.create_booking, name='create_booking'),
+    # Path for the booking list (we'll create this view next)
+    path('my-bookings/', views.create_booking, name='booking_list'),
 ]
