@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -44,3 +45,13 @@ def booking_list(request):
         user=request.user).order_by('booking_date')
 
     return render(request, 'booking/booking_list.html', {'bookings': bookings})
+
+
+def home_page(request):
+    """
+    Display the restaurant's home page.
+
+    **Template:**
+    :template:`index.html`
+    """
+    return render(request, "index.html")
