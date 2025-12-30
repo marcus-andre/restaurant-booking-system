@@ -7,21 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Booking System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-    body {
-        /* Add and style the hero-bg image using Cloudinary CDN */
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url("https://res.cloudinary.com/marcusrd/image/upload/v1/static/images/hero-bg.png") no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-    }
-</style>
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent mb-4">
         <div class="container">
             <a class="navbar-brand" href="/">The Restaurant</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -53,20 +43,22 @@
         {% if messages %}
         <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
+                <div class="modal-content auth-card border-0">
+                    <div class="modal-header border-0">
                         <h5 class="modal-title" id="messageModalLabel">System Notification</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }} m-0 mb-2">
-                            {{ message }}
+                        <div
+                            class="alert alert-{{ message.tags }} bg-transparent border-light border-opacity-25 text-white m-0 mb-2">
+                            <i class="bi bi-info-circle me-2"></i> {{ message }}
                         </div>
                         {% endfor %}
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
@@ -82,10 +74,8 @@
     {% if messages %}
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Target the Modal element by ID
             var modalElement = document.getElementById('messageModal');
             if (modalElement) {
-                // Initialize the Bootstrap Modal instance and display it
                 var myModal = new bootstrap.Modal(modalElement);
                 myModal.show();
             }
