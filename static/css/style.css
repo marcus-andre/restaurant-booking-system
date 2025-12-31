@@ -1,8 +1,5 @@
 /* General Body Styling with Hero Background */
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url("../images/hero-bg.png") no-repeat center center fixed;
-    background-size: cover;
     color: white;
     min-height: 100vh;
     font-family: 'Inter', sans-serif; /* Modern font for body text */
