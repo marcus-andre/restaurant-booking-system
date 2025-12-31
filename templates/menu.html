@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="auth-card">
+        <h2 class="text-center mb-5">The Grand Experience Menu</h2>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="p-3 border-bottom border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h4 class="text-white">Oysters & Pearls</h4>
+                        <span class="text-primary fw-bold fs-5">$125</span>
+                    </div>
+                    <p class="text-white-50 small">Sabayon of pearl tapioca with Island Creek oysters and White Sturgeon caviar.</p>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="p-3 border-bottom border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h4 class="text-white">White Truffle Tagliolini</h4>
+                        <span class="text-primary fw-bold fs-5">$185</span>
+                    </div>
+                    <p class="text-white-50 small">Hand-cut pasta with Alba white truffle, mountain butter, and 24-month aged Parmesan.</p>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="p-3 border-bottom border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h4 class="text-white">Miyazaki A5 Wagyu</h4>
+                        <span class="text-primary fw-bold fs-5">$245</span>
+                    </div>
+                    <p class="text-white-50 small">Wood-fired Japanese beef, bone marrow jus, and fermented black garlic reduction.</p>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="p-3 border-bottom border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h4 class="text-white">Golden Sphere</h4>
+                        <span class="text-primary fw-bold fs-5">$95</span>
+                    </div>
+                    <p class="text-white-50 small">24k gold leaf chocolate, Madagascan vanilla, and aged cognac infusion.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="{% url 'create_booking' %}" class="btn btn-primary px-5">Book a Table to Taste</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -55,3 +55,8 @@ def home_page(request):
     :template:`index.html`
     """
     return render(request, "index.html")
+
+
+# Define the path for the menu
+def menu_view(request):
+    return render(request, 'menu.html')

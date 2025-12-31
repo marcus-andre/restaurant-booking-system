@@ -29,4 +29,4 @@ class Booking(models.Model):
         ordering = ["booking_date", "booking_time"]
 
     def __str__(self):
-        return f"{self.name} | {self.booking_date} at {self.booking_time}"
+        return f"{self.name} | {self.booking_date} at {self.booking_time}  ({self.number_of_guests} Guests)"
