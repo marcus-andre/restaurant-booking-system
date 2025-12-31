@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
 # AC1: Added Heroku host to allowed hosts
-ALLOWED_HOSTS = ['pearl-and-truffle-booking.herokuapp.com',
+ALLOWED_HOSTS = ['.herokuapp.com',
                  '127.0.0.1', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = [
