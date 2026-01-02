@@ -157,3 +157,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Cloudinary Settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# Security: Allow the site to be rendered in frames on the same origin.
+# This is temporarily set to 'SAMEORIGIN' to allow for responsive mockup generation
+# and UI testing while maintaining protection against cross-site clickjacking.
+X_FRAME_OPTIONS = 'SAMEORIGIN'
