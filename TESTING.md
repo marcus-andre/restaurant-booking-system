@@ -73,7 +73,7 @@ The application achieved high scores across all metrics, ensuring a fast and acc
 * **Best Practices:** 100
 * **SEO:** 90
 
-![Lighthouse Audit Results](./documentation/lighthouse-result.jpg)
+![Lighthouse Audit Results](./documentation/lighthouse-results.jpg)
 
 > *Note: Accessibility scores were optimized by implementing high-contrast text and ensuring all interactive elements (buttons, links) utilize proper `aria-labels` for screen readers.*
 
