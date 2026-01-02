@@ -131,6 +131,34 @@ select[name="booking_time"] option {
     gap: 0.5rem !important;
 }
 
+
+/* --- ACCESSIBILITY FIXES (Lighthouse) --- */
+
+/* 1. Global Contrast Fix: Forces high contrast (white text with dark shadow) for better readability */
+body, h1, h2, h3, h4, h5, h6, p, span, a, li, div {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px #000000 !important; /* Solid black shadow */
+}
+
+/* 2. Fix Form Labels: Overrides previous grey color to ensure visibility */
+.auth-card label, .auth-card .form-text {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* 3. Fix Menu Descriptions: Removes transparency from Bootstrap's .text-white-50 class */
+.text-white-50, .text-white-50.small {
+    color: #ffffff !important; /* Changes grey to white */
+    opacity: 1 !important;     /* Removes 50% opacity */
+    font-weight: 400;          /* Ensures font isn't too thin */
+}
+
+/* 4. Button Visibility: Removes text shadow on buttons for cleaner look */
+.btn-primary {
+    text-shadow: none !important;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     body {
